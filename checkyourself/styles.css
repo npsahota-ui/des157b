@@ -1,0 +1,118 @@
+body {
+    background: radial-gradient(50% 50% at 50% 50%, #FCF5D9 0%, #FFEDD5 53.07%, #FFD7E8 100%);
+    cursor: url('images/froyo3.png'), auto;
+}
+
+header {
+    text-align: center;
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: #8c93c1;
+    letter-spacing: 2px;
+    padding: 20px;
+}
+
+h2 {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    letter-spacing: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-13px); }
+    100% { transform: translateY(0px); }
+}
+
+.calendar {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.floating {
+    animation: float 2.5s ease-in-out infinite;
+}
+
+.calendar img {
+    transition: transform 0.5s ease;
+}
+
+.calendar:hover img {
+    transform: scale(1.25);
+}
+
+.calendar:hover .floating {
+    animation-play-state: paused;
+}
+
+footer {
+    text-align: center;
+    padding-top: 70px;
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #8c93c1;
+}
+
+a {
+    color: #d68bb4;
+}
+
+a:hover {
+    color: white;
+}
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay-content {
+    background: #FCF5D9;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    font-family: "Cherry Bomb One", system-ui;
+    color: #8c93c1;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #8c93c1;
+}
+
+

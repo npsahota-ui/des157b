@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check yourself</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>nisha's froyo consumption 2026</h1>
+        <h2>see how much froyo i've had so far this year!</h2>
+    </header>
+
+    <section>
+
+        <button class="calendar" onclick="openOverlay('january')">
+            <div class="floating">
+                <img src="images/calendar_jan.png" alt="calendar flipped to january" width="350" height="350">
+            </div>
+        </button>
+
+        <button class="calendar" onclick="openOverlay('february')">
+            <div class="floating">
+                <img src="images/calendar_feb.png" alt="calendar flipped to february" width="350" height="350">
+            </div>
+        </button>
+
+        <button class="calendar" onclick="openOverlay('march')">
+            <div class="floating">
+                <img src="images/calendar_march.png" alt="calendar flipped to march" width="350" height="350">
+            </div>
+        </button>
+
+        <button class="calendar" onclick="openOverlay('april')">
+            <div class="floating">
+                <img src="images/calendar_april.png" alt="calendar flipped to april" width="350" height="350">
+            </div>
+        </button>
+
+    </section>
+
+    <div id="overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay()">✕</button>
+            <h2 id="overlay-month"></h2>
+            <div id="stamp-card" class="stamp-card"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Designed by Nisha Sahota</p>
+        <a href="mailto:&#110;&#112;&#115;&#097;&#104;&#111;&#116;&#097;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email Me</a>
+    </footer>
+
+</body>
+</html>
