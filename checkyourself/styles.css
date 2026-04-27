@@ -90,18 +90,12 @@ a:hover {
     z-index: 10;
 }
 
-.hidden {
+#overlay-month {
     display: none;
 }
 
-.overlay-content {
-    background: #FCF5D9;
-    border-radius: 20px;
-    padding: 40px;
-    text-align: center;
-    position: relative;
-    font-family: "Cherry Bomb One", system-ui;
-    color: #8c93c1;
+.hidden {
+    display: none;
 }
 
 .close-btn {
@@ -112,7 +106,41 @@ a:hover {
     border: none;
     font-size: 20px;
     cursor: pointer;
-    color: #8c93c1;
+    color: #ffffff;
 }
 
+.card-wrapper {
+    background-image: url('images/stampcard.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 700px;
+    height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.stamps-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px 40px;
+    margin-top: 40px;
+}
+
+.stamp-slot {
+    width: 120px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stamp-img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
