@@ -41,6 +41,7 @@ section {
 }
 
 .floating {
+    display: block;
     animation: float 2.5s ease-in-out infinite;
 }
 
