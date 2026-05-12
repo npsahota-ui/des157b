@@ -24,3 +24,22 @@ p {
     line-height: 30px;
     color:rgb(44, 28, 4)
 }
+
+a {
+    color: rgb(139, 69, 114);
+}
+
+a:hover {
+    color:rgb(232, 234, 103)
+}
+
+img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1.5em;
+}
+
+section {
+    padding-bottom: 2em;
+}
