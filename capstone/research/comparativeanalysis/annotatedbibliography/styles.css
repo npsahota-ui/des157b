@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(222, 229, 235);
+    padding-bottom: 3em;
+}
+
+header {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    color:rgb(7, 9, 63);
+}
+
+p {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 18px;
+    padding-left: 15em;
+    padding-right: 15em;
+    line-height: 30px;
+    color:rgb(44, 28, 4)
+}
+
+a {
+    color: rgb(139, 69, 114);
+}
+
+a:hover {
+    color:rgb(232, 234, 103)
+}
+
+img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1.5em;
+}
+
+section {
+    padding-bottom: 2em;
+}
