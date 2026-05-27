@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capstone version 1</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>i don't want to think about the future!</h1>
+    </header>
+
+    <section>
+        <h2>WHY?</h2>
+        <h2>because it's so scary!</h2>
+        <p>lately it feels like there has been constant negativity. all we hear about is issues regarding climate change, war, politics, the job market, AI in every corner...it is hard to stay hopeful sometimes.</p>
+    </section>
+
+    <section class="question-section">
+        <div class="question-box" data-aos="fade-up">
+            <div id="first-question">
+                <p class="question-text">have you ever felt anxious about the future?</p>
+                <div class="question-input">
+                    <input type="text" id="user-response" placeholder="type your response here..." />
+                    <button class="submit-btn" id="submit-btn">→</button>
+                </div>
+            </div>
+            <div class="next-question" id="next-question">
+                <p class="question-text">what about it scares you?</p>
+                <div class="question-input">
+                    <input type="text" id="user-response-2" placeholder="type your response here..." />
+                    <button class="submit-btn" id="submit-btn-2">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <p>don't worry, you and LOTS of people feel the same</p>
+        <p class="p-stats">insert stats</p>
+    </section>
+
+    <section class="people-section">
+        <div id="people-row"></div>
+        <div id="people-row-2"></div>
+        <div id="people-row-3"></div>
+    </section>
+
+    <section class="people-close-section">
+        <div id="people-row-close"></div>
+    </section>
+
+    <section class="heart-section">
+        <div class="arms-and-heart">
+            <div class="arm arm-left">
+                <div class="hand hand-left"></div>
+            </div>
+            <div class="heart-wrap">
+                <svg class="heart-svg" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 80 C50 80 10 50 10 28 C10 15 20 5 35 8 C42 10 50 18 50 18 C50 18 58 10 65 8 C80 5 90 15 90 28 C90 50 50 80 50 80Z" fill="rgba(255,255,255,0.15)"/>
+                    <text x="50" y="35" text-anchor="middle" fill="white" font-family="Libertinus Serif Display, serif" font-size="9">and that's</text>
+                    <text x="50" y="48" text-anchor="middle" fill="white" font-family="Libertinus Serif Display, serif" font-size="9">what counts!</text>
+                </svg>
+            </div>
+            <div class="arm arm-right">
+                <div class="hand hand-right"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="yellow-section" id="yellow-section">
+        <h3>everyone gets scared, even the toughest person you know!</h3>
+        <h4>it's what makes us human.</h4>
+
+        <div class="image-grid">
+            <div class="image-placeholder"></div>
+            <div class="image-placeholder"></div>
+            <div class="image-placeholder wide"></div>
+            <div class="image-placeholder wide"></div>
+            <div class="image-placeholder"></div>
+        </div>
+
+        <div class="scared-together">
+            <h3>let's be scared together</h3>
+            <p>even though times are uncertain and we can’t predict the future, there is one thing that’s for sure: we have each other!</p>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
