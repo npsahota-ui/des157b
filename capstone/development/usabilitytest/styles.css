@@ -4,6 +4,56 @@ body {
     transition: background-color 1s ease;
 }
 
+.page-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 40, 40, 0.97);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+}
+
+.page-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.page-overlay-box {
+    text-align: center;
+    max-width: 700px;
+    padding: 3rem;
+}
+
+.page-overlay-text {
+    font-family: "Libertinus Serif Display", serif;
+    color: white !important;
+    font-size: 40px !important;
+    max-width: 100% !important;
+    line-height: 1.6;
+    margin-bottom: 3rem !important;
+}
+
+.page-overlay-btn {
+    font-family: "Libertinus Serif Display", serif;
+    font-size: 25px;
+    color: white;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.page-overlay-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: white;
+}
+
 body.yellow {
     background-color: #e8e4a0;
 }

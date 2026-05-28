@@ -136,4 +136,12 @@
         }
     });
 
+    // ── Page load overlay ──
+    const pageOverlay = document.getElementById('page-overlay');
+    const pageOverlayBtn = document.getElementById('page-overlay-btn');
+
+    pageOverlayBtn.addEventListener('click', () => {
+        pageOverlay.classList.add('hidden');
+});
+
 })();
