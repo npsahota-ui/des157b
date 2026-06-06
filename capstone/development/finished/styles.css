@@ -183,7 +183,8 @@ p {
 /* People close row */
 .people-close-section {
     overflow: hidden;
-    padding: 0;
+    padding-top: 5em;
+    padding-bottom: 5em;
 }
 
 #people-row-close {
@@ -203,60 +204,31 @@ p {
 }
 
 .arms-and-heart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     width: 100%;
-}
-
-.arm {
-    width: 45%;
-    height: 90px;
-    background: white;
-    border-radius: 45px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-shrink: 0;
 }
 
-.arm-left {
-    justify-content: flex-end;
-    transform: rotate(20deg);
-    transform-origin: left center;
-    margin-left: -5%;
-}
-
-.arm-right {
-    justify-content: flex-start;
-    transform: rotate(-20deg);
-    transform-origin: right center;
-    margin-right: -5%;
-}
-
-.hand {
-    width: 150px;
-    height: 150px;
-    background: white;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.hand-left {
-    margin-right: -50px;
-}
-
-.hand-right {
-    margin-left: -50px;
+.holding-hands-img {
+    width: 100%;
+    max-width: 1500px;
+    object-fit: contain;
+    display: block;
 }
 
 .heart-wrap {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
-    flex-shrink: 0;
 }
 
 .heart-svg {
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
     animation: heartPulse 2s ease-in-out infinite;
     filter: drop-shadow(0 0 20px rgba(230, 124, 185, 1));
 }
@@ -292,35 +264,35 @@ p {
     margin: 1rem auto 4rem auto;
 }
 
-/* Image grid */
+/* Floating photo bubbles */
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 900px;
+    position: relative;
+    width: 100%;
+    height: 600px;
     margin: 0 auto 6rem auto;
-    padding: 0 2rem;
 }
 
 .img-wrap {
-    position: relative;
+    position: absolute;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 50%;
     overflow: hidden;
+    width: 180px;
+    height: 180px;
 }
 
 .img-wrap.wide {
-    grid-column: span 2;
+    width: 220px;
+    height: 220px;
 }
 
 .img-wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    aspect-ratio: 4/3;
     display: block;
     transition: filter 0.3s ease;
-    border-radius: 8px;
+    border-radius: 50%;
 }
 
 .img-wrap:hover img {
@@ -515,9 +487,13 @@ p {
 }
 
 /* Ensure all content sits above the particle canvas */
-header, section, div.yellow-questions, div.modal-overlay {
+header, section, div.yellow-questions {
     position: relative;
     z-index: 1;
+}
+
+div.modal-overlay {
+    z-index: 999;
 }
 
 @keyframes caretBlink {
@@ -532,4 +508,27 @@ header, section, div.yellow-questions, div.modal-overlay {
 .section-fade.out-of-view {
     opacity: 0;
     transform: translateY(-20px);
+}
+
+/* Fire section */
+.fire-section {
+    padding: 0 !important;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+
+#fire-row {
+    display: block;
+    width: 100%;
+    line-height: 0;
+}
+
+#fire-row canvas {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    display: block;
 }
