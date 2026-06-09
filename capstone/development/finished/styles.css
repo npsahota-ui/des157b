@@ -123,6 +123,9 @@ p {
 
 .next-question {
     display: none;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .next-question.visible {
@@ -142,7 +145,9 @@ p {
 }
 
 .p-stats {
-    font-size: 70px;
+    padding-top: 20px;
+    font-size: 30px;
+    width: 850px;
 }
 
 /* People scrolling rows */
@@ -268,7 +273,7 @@ p {
 .image-grid {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 1800px;
     margin: 0 auto 6rem auto;
 }
 
@@ -277,13 +282,13 @@ p {
     cursor: pointer;
     border-radius: 50%;
     overflow: hidden;
-    width: 180px;
-    height: 180px;
+    width: 350px;
+    height: 350px;
 }
 
 .img-wrap.wide {
-    width: 220px;
-    height: 220px;
+    width: 400px;
+    height: 400px;
 }
 
 .img-wrap img {
@@ -358,6 +363,15 @@ p {
     opacity: 1;
 }
 
+.modal-name {
+    font-family: "Libertinus Serif Display", serif;
+    color: rgba(230, 124, 185, 1);
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0 0 1.5rem 0;
+    display: block;
+}
+
 /* Let's be scared together */
 .scared-together {
     padding-left: 0;
@@ -392,7 +406,25 @@ p {
     padding: 3rem 5rem;
     text-align: center;
     min-height: 200px;
+}
+
+.yellow-next {
+    display: none;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(230, 124, 185, 0.15);
+}
+
+.yellow-next.visible {
+    display: block;
     animation: fadeIn 0.6s ease forwards;
+}
+
+/* First question visible by default */
+#yellow-q1 {
+    display: block;
+    opacity: 1;
+    filter: blur(0px);
 }
 
 .yellow-question-text {
@@ -517,6 +549,7 @@ div.modal-overlay {
     width: 100%;
     overflow: hidden;
     background: transparent;
+    position: relative;
 }
 
 #fire-row {
@@ -531,4 +564,96 @@ div.modal-overlay {
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     display: block;
+}
+
+/* Burn lead text */
+.burn-lead {
+    text-align: center;
+    padding: 15em 2em;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Burn section */
+.burn-section {
+    padding: 8em 2em !important;
+    text-align: center;
+}
+
+.burn-heading {
+    font-family: "Libertinus Serif Display", serif;
+    color: #e8e4a0;
+    font-size: 100px;
+    font-weight: 400;
+    margin: 0 auto 1.5em auto;
+    line-height: 1.2;
+}
+
+.burn-input-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.burn-input-wrap input {
+    font-family: "Libertinus Serif Display", serif;
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.burn-input-wrap input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.burn-input-wrap input:focus {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.burn-input-wrap button {
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+    padding: 0;
+}
+
+.burn-input-wrap button:hover {
+    opacity: 1;
+}
+
+.falling-word {
+    position: absolute;
+    font-family: "Libertinus Serif Display", serif;
+    font-size: 40px;
+    color: white;
+    white-space: nowrap;
+    animation: fallDown var(--fall-duration) ease-in forwards;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -60px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+@keyframes fallDown {
+    0%   { top: -60px; opacity: 1; }
+    70%  { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
 }
